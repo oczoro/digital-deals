@@ -47,6 +47,12 @@ p {
   border: 1px solid transparent;
   border-radius: 0.25rem;
 }
+.gradient-border-dark {
+  background: linear-gradient(#35324d, #35324d) padding-box,
+    linear-gradient(-5deg, theme('colors.barney'), theme('colors.ice')) border-box;
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+}
 
 .hidden-scroll::-webkit-scrollbar {
   display: none;

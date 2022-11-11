@@ -1,6 +1,6 @@
 <template>
   <nav>
-    <ul class="flex flex-wrap gap-y-2">
+    <ul class="pt-6 | flex flex-wrap gap-y-2">
       <li class="nav-item"><router-link to="/">Home</router-link></li>
       <li class="nav-item">
         <router-link to="/products">Products</router-link>
