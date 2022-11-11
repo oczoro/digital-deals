@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Fahkwang&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Defaults */
+* {
+  font-family: 'Fahkwang', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  @apply text-ocean-default;
+}
+
+/* Components */
+.btn {
+  @apply block w-full p-2 rounded-sm text-center uppercase shadow-md;
+}
+
+/* General Helpers */
+.r-mt {
+  @apply mt-8;
+}
+.r-mx {
+  @apply mx-2 md:mx-10 lg:mx-36;
+}
+.r-ml {
+  @apply ml-2 md:ml-10 lg:ml-36;
+}
+.r-pr {
+  @apply pr-2 md:pr-10 lg:pr-36;
+}
+.r-pl {
+  @apply pl-2 md:pl-10 lg:pl-36;
+}
+
+/* Style Helpers */
+.gradient-border {
+  background: linear-gradient(white, white) padding-box,
+    linear-gradient(-5deg, theme('colors.barney'), theme('colors.ice')) border-box;
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+}
+
+.hidden-scroll::-webkit-scrollbar {
+  display: none;
+}
+.hidden-scroll {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
