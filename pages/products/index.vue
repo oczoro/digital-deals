@@ -7,6 +7,7 @@
       category="products"
       :products="products"
     />
+    <PageNav />
   </div>
 </template>
 

@@ -6,7 +6,9 @@
     </div>
     <div class="r-pl pt-8 pb-8 | flex gap-4 | overflow-x-scroll hidden-scroll">
       <div v-for="(product, index) in products" :key="index">
-        <ProductCard :product="product" />
+        <router-link :to="`/products/${product.id}`">
+          <ProductCard :product="product" />
+        </router-link>
       </div>
     </div>
   </section>

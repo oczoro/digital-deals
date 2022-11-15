@@ -47,11 +47,22 @@ p {
   border: 1px solid transparent;
   border-radius: 0.25rem;
 }
+.gradient-border-3 {
+  background: linear-gradient(white, white) padding-box,
+    linear-gradient(-5deg, theme('colors.barney'), theme('colors.ice')) border-box;
+  border: 3px solid transparent;
+  border-radius: 0.25rem;
+}
 .gradient-border-dark {
   background: linear-gradient(#35324d, #35324d) padding-box,
     linear-gradient(-5deg, theme('colors.barney'), theme('colors.ice')) border-box;
   border: 1px solid transparent;
   border-radius: 0.25rem;
+}
+.gradient-border-b {
+  background: linear-gradient(white, white) padding-box,
+    linear-gradient(-5deg, theme('colors.barney'), theme('colors.ice')) border-box;
+  border-bottom: 1px solid transparent;
 }
 
 .hidden-scroll::-webkit-scrollbar {
