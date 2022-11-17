@@ -22,7 +22,7 @@
   </div>
   <div
     class="hidden lg:block max-h-[250px] w-16 md:w-20 lg:w-full lg:col-span-2"
-    v-for="product in products.slice(2)"
+    v-for="product in products.slice(2, products.length - 1)"
     :key="product.id"
   >
     <img

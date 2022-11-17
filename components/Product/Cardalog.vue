@@ -1,6 +1,6 @@
 <template>
   <router-link
-    :to="`/${category}/${product.id}`"
+    :to="`/products/${category}/${product.id}`"
     class="card | min-h-[220px] h-full | flex flex-col | gradient-border !rounded-xl"
   >
     <div class="card-image">

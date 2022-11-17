@@ -25,7 +25,7 @@ p {
 
 /* General Helpers */
 .r-mt {
-  @apply mt-8;
+  @apply mt-6 md:mt-12;
 }
 .r-mx {
   @apply mx-2 md:mx-10 lg:mx-36;
@@ -46,6 +46,11 @@ p {
     linear-gradient(-5deg, theme('colors.barney'), theme('colors.ice')) border-box;
   border: 1px solid transparent;
   border-radius: 0.25rem;
+}
+.gradient-border-rnone {
+  background: linear-gradient(white, white) padding-box,
+    linear-gradient(-5deg, theme('colors.barney'), theme('colors.ice')) border-box;
+  border: 1px solid transparent;
 }
 .gradient-border-3 {
   background: linear-gradient(white, white) padding-box,

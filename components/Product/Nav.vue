@@ -3,7 +3,7 @@
     <div class="btn bg-ocean-default text-neutral">Categories</div>
     <ul>
       <li v-for="(category, index) in categories" :key="index">
-        <router-link :to="`/products/${category}`" class="mt-2 btn gradient-border">{{
+        <router-link :to="`/products/${category}`" class="mt-3 btn gradient-border">{{
           category
         }}</router-link>
       </li>

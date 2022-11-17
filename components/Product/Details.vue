@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <section class="r-mx py-4">
+  <section class="relative">
+    <div class="r-mx py-4">
       <Breadcrumbs :routes="routes" />
       <div class="mt-4">
         <img
@@ -37,8 +37,8 @@
           Checkout
         </button>
       </div>
-    </section>
-  </div>
+    </div>
+  </section>
 </template>
 
 <script setup>
@@ -56,3 +56,19 @@ function checkout(product) {
   router.push('/checkout');
 }
 </script>
+
+<style scoped>
+@media (min-width: 768px) {
+  section::before {
+    content: '';
+    background-image: url('/img/shape-1.svg');
+    position: absolute;
+    z-index: -1;
+    top: -280px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    height: 1200px;
+  }
+}
+</style>

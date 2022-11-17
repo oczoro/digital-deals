@@ -4,7 +4,7 @@
   >
     <div class="card-image">
       <img
-        class="w-full h-40 | rounded-t-3xl object-cover"
+        class="w-full h-40 md:h-44 | rounded-t-3xl object-cover"
         :src="`/img/products/${product.img}`"
         :alt="product.alt"
       />

@@ -6,7 +6,7 @@
     </p>
     <div class="mt-4 | flex gap-1">
       <input
-        class="min-w-0 px-1 py-2 | text-ocean-default rounded-lg"
+        class="w-0 max-w-sm grow px-1 py-2 | text-ocean-default rounded-lg"
         type="email"
         placeholder="Email Address"
       />
