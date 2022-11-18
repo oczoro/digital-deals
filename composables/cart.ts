@@ -1,12 +1,28 @@
+import { getDiscountPrice } from './products';
 import { ref } from 'vue';
 import { product } from '@/data/products';
 
-let cart = new Map<number, object>();
+const cart = ref(new Map<number, object>());
+const TAX_RATE = 0.06;
 
-export const getCart = () => ref(Array.from(cart.values()));
+export const getCartValues = () => ref(cart.value.values());
 
-export const getCartProduct = (id: number) => ref(cart.get(id));
+export const getCart = () => ref(Array.from(getCartValues().value));
 
-export const addCartProduct = (product: product) => cart.set(product.id, product);
+export const getCartProduct = (id: number) => ref(cart.value.get(id));
 
-export const removeCartProduct = (product: product) => cart.delete(product.id);
+export const addCartProduct = (product: product) => cart.value.set(product.id, product);
+
+export const removeCartProduct = (product: product) => cart.value.delete(product.id);
+
+export const getCartSubTotal = () => {
+  let total = 0;
+  Array.from(cart.value.values()).forEach((product: product) => {
+    total += product.amount * getDiscountPrice(product.price, product.discount);
+  });
+  return ref(total);
+};
+
+export const getTax = () => ref(getCartSubTotal().value * TAX_RATE);
+
+export const getCartTotal = () => ref(getCartSubTotal().value + getTax().value);

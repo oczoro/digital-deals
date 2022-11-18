@@ -1,14 +1,14 @@
 <template>
-  <div>
-    <Breadcrumbs class="r-mx mt-4" :routes="routes" />
+  <section class="r-mt r-mb">
+    <Breadcrumbs class="r-mx" :routes="routes" />
     <ProductCatalog
       class="r-mx"
       title="All - Products"
       category="products"
       :products="products"
     />
-    <PageNav />
-  </div>
+    <!-- <PageNav /> -->
+  </section>
 </template>
 
 <script setup>

@@ -28,5 +28,5 @@ export const getProductsInCategory = (category: string) => {
 
 export const getDiscountPrice = (price: number, discount: number) => {
   const amount = price - (price * discount) / 100;
-  return amount.toFixed(2);
+  return amount;
 };

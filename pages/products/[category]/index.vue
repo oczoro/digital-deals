@@ -7,7 +7,7 @@
       :category="$route.params.category"
       :products="products"
     />
-    <PageNav />
+    <!-- <PageNav /> -->
   </section>
 </template>
 

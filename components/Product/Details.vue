@@ -21,9 +21,9 @@
               <select
                 class="py-2 px-1 | grow max-w-[225px] | gradient-border"
                 name="amount-dropdown"
-                v-model="product.amount"
+                v-model="selectedAmount"
               >
-                <option disabled value="">Please select one</option>
+                <option disabled value="-1">Please select one</option>
                 <option v-for="amount in product.stock">
                   {{ amount }}
                 </option>
@@ -31,12 +31,12 @@
             </div>
             <div class="grow | flex gap-4 justify-start items-center">
               <p class="text-lg md:text-4xl font-bold">
-                ${{ getDiscountPrice(product.price, product.discount) }}
+                ${{ getDiscountPrice(product.price, product.discount).toFixed(2) }}
               </p>
               <p class="text-sm md:text-xl line-through">${{ product.price }}</p>
             </div>
           </div>
-          <div class="mt-4 | flex flex-col gap-4">
+          <div class="mt-4 | flex flex-col mdlg:flex-row gap-4">
             <button
               @click="addToCart(product)"
               class="grow text-white uppercase | bg-aqua py-4 rounded"
@@ -64,11 +64,14 @@ const props = defineProps({
   routes: Array,
 });
 
+console.log(props.routes);
+
 const router = useRouter();
 
-// const selectedAmount = ref(1);
+const selectedAmount = ref(1);
 
 function addToCart(product) {
+  product.amount = selectedAmount.value;
   addCartProduct(product);
   alert('Added product to your cart!');
 }

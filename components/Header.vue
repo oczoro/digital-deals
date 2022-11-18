@@ -67,12 +67,12 @@
         class="fixed inset-0 z-50 | text-white bg-ocean-default/90 transition-all duration-150 ease-in"
       >
         <button
-          class="absolute top-4 right-4 hover:brightness-125"
+          class="absolute top-4 right-4 md:top-8 md:right-8 hover:brightness-125"
           @click="menu_toggled = !menu_toggled"
         >
           <img src="/icons/close.svg" alt="Close" /><span class="sr-only">Close</span>
         </button>
-        <ul class="h-full p-8 | flex flex-col justify-center gap-2">
+        <ul class="h-full p-8 md:px-32 | flex flex-col justify-center gap-2">
           <li
             class="p-1 hover:-translate-y-1 hover:brightness-125 transition-all duration-75 ease-out"
             v-for="(category, index) in categories"

@@ -10,8 +10,8 @@ const product = getProduct(parseInt(route.params.id));
 const routes = ref([
   { route: '/', name: 'Home' },
   {
-    route: `/${product.id}`,
-    name: product.name,
+    route: `/${product.value.id}`,
+    name: product.value.name,
   },
 ]);
 </script>

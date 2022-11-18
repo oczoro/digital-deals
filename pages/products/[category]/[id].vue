@@ -11,8 +11,8 @@ const routes = ref([
   { route: '/', name: 'Home' },
   { route: `/products/${route.params.category}`, name: `${route.params.category}` },
   {
-    route: `/products/${route.params.category}/${product.id}`,
-    name: product.name,
+    route: `/products/${route.params.category}/${product.value.id}`,
+    name: product.value.name,
   },
 ]);
 </script>
