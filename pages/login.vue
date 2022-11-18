@@ -1,5 +1,5 @@
 <template>
-  <section class="bg-gradient-to-br from-cyan-stop to-purp-stop">
+  <section class="min-h-[500px] bg-gradient-to-br from-cyan-stop to-purp-stop">
     <ModalCard class="r-mx py-2" title="Login" submitName="Login">
       <template #fields>
         <div class="w-full p-2 | flex gap-2 | gradient-border-b">

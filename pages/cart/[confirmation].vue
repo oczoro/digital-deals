@@ -1,5 +1,5 @@
 <template>
-  <section>
+  <section class="min-h-[500px]">
     <div class="relative | r-mx r-mt r-mb p-4 | gradient-border-rnone rounded-2xl">
       <button class="absolute top-4 right-4">
         <img src="/icons/close-grey.svg" alt="Close" /><span class="sr-only">Close</span>

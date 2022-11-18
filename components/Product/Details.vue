@@ -14,6 +14,7 @@
           class="grow basis-1/2 p-4 md:p-8 | flex flex-col gap-4 md:gap-8 | gradient-border-rnone rounded-2xl"
         >
           <h1 class="text-2xl md:text-5xl font-bold">{{ product.name }}</h1>
+          <p class="text-xl">{{ product.subtitle }}</p>
           <p class="text-xl">{{ product.description }}</p>
           <div class="mt-4 | flex flex-col gap-4 md:gap-8">
             <div class="grow | flex items-center gap-8 justify-start">
@@ -39,13 +40,13 @@
           <div class="mt-4 | flex flex-col mdlg:flex-row gap-4">
             <button
               @click="addToCart(product)"
-              class="grow text-white uppercase | bg-aqua py-4 rounded"
+              class="grow text-white uppercase | bg-aqua py-4 rounded hover:shadow-md hover:brightness-110 transition duration-200 ease-in"
             >
               Add to cart
             </button>
             <button
               @click="checkout(product)"
-              class="grow text-white uppercase | bg-ocean-grey py-4 rounded"
+              class="grow text-white uppercase | bg-ocean-grey py-4 rounded hover:shadow-md hover:brightness-110 transition duration-200 ease-in"
             >
               Checkout
             </button>

@@ -1,7 +1,9 @@
 <template>
-  <div>
-    <ProductDetails :product="product" :routes="routes" />
-  </div>
+  <section class="min-h-[500px]">
+    <div>
+      <ProductDetails :product="product" :routes="routes" />
+    </div>
+  </section>
 </template>
 
 <script setup>

@@ -18,7 +18,7 @@
 
 <style scoped>
 .nav-item {
-  @apply grow shrink basis-1/3 max-w-[33.333333%] md:max-w-none md:basis-0 font-bold;
+  @apply grow shrink basis-1/3 max-w-[33.333333%] md:max-w-none md:basis-0 md:text-xl font-bold;
 }
 
 .nav-item ul {

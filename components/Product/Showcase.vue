@@ -4,7 +4,7 @@
       <h1 class="text-2xl md:text-5xl font-bold">{{ title }}</h1>
       <router-link
         :to="`/products/${title}`"
-        class="h-fit px-4 py-1 | text-neutral | bg-aqua rounded-md"
+        class="h-fit px-4 py-1 | text-neutral | bg-aqua rounded-md hover:shadow-md hover:brightness-110 transition duration-200 ease-in"
       >
         View All
       </router-link>

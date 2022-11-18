@@ -39,7 +39,10 @@
       >
         <ul class="flex gap-2 md:gap-4 justify-end">
           <li>
-            <router-link :tabindex="isDesktop ? 4 : isTablet ? 5 : 2" to="/cart"
+            <router-link
+              class="hover:brightness-150 transition duration-100 ease-in-out"
+              :tabindex="isDesktop ? 4 : isTablet ? 5 : 2"
+              to="/cart"
               ><img class="w-8" src="/icons/cart.svg" alt="Shopping Cart" /><span
                 class="hidden self-center lg:block"
                 >cart</span
@@ -48,6 +51,7 @@
           </li>
           <li>
             <router-link
+              class="hover:brightness-150 transition duration-100 ease-in-out"
               :tabindex="isDesktop ? 5 : isTablet ? 6 : 3"
               :to="loggedIn ? '/account' : '/login'"
               ><img class="w-8" src="/icons/user.svg" alt="Account" /><span

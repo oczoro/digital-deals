@@ -1,5 +1,5 @@
 <template>
-  <section class="r-mt r-mb">
+  <section class="min-h-[500px] r-mt r-mb">
     <Breadcrumbs class="r-mx" :routes="routes" />
     <ProductCatalog
       class="r-mx"

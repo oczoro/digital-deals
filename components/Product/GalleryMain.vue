@@ -15,7 +15,7 @@
     />
     <router-link
       to="/products/Deals"
-      class="absolute bottom-4 ml-2 md:ml-10 lg:ml-4 | p-4 md:p-6 border-2 border-neutral text-2xl md:text-3xl text-neutral uppercase rounded-3xl"
+      class="absolute bottom-4 ml-2 md:ml-10 lg:ml-4 | p-4 md:p-6 border-2 border-neutral text-2xl md:text-3xl text-neutral uppercase rounded-3xl hover:brightness-125 hover:backdrop-blur-sm duration-200 ease-out"
     >
       See Deals
     </router-link>

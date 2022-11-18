@@ -20,7 +20,7 @@
         </div>
         <router-link
           to="/products/Deals"
-          class="w-fit py-4 px-6 lg:py-8 lg:px-10 lg:self-end | text-3xl md:text-4xl lg:text-6xl text-white drop-shadow-md | bg-transparent border-4 border-white rounded-full"
+          class="w-fit py-4 px-6 lg:py-8 lg:px-10 lg:self-end | text-3xl md:text-4xl lg:text-6xl text-white drop-shadow-md | bg-transparent border-4 border-white rounded-full hover:brightness-125 hover:backdrop-blur-sm duration-300 ease-in"
         >
           SEE DEALS
         </router-link>

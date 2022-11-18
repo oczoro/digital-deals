@@ -5,12 +5,12 @@
         <Title>Digital Deals</Title>
       </Head>
     </Html>
-    <div>
+    <section class="min-h-[500px]">
       <Hero :products="products" />
       <ProductShowcase class="r-mt" title="Featured" :products="featured" />
       <SaleBanner class="r-mt" />
       <ProductShowcase class="r-mt r-mb" title="Trending" :products="trending" />
-    </div>
+    </section>
   </div>
 </template>
 

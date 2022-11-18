@@ -1,6 +1,6 @@
 <template>
   <div
-    class="card | w-48 h-full | flex flex-col | shadow-card rounded-t-3xl rounded-b-3xl"
+    class="card | w-48 h-full | flex flex-col | shadow-card rounded-t-3xl rounded-b-3xl hover:scale-105 transition duration-200 ease-in"
   >
     <div class="card-image">
       <img

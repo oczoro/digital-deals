@@ -1,7 +1,7 @@
 <template>
   <router-link
     :to="`/products/${category}/${product.id}`"
-    class="card | min-h-[220px] h-full | flex flex-col | gradient-border !rounded-xl"
+    class="card | min-h-[220px] h-full | flex flex-col | gradient-border-rnone rounded-xl hover:shadow-lg transition duration-200 ease-out"
   >
     <div class="card-image">
       <img
