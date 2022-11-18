@@ -1,16 +1,18 @@
+import { ref } from 'vue';
 import { categories } from '@/data/categories';
 import { products } from '@/data/products';
 
 export const getCategories = () => {
-  return categories;
+  return ref(categories);
 };
 
 export const getProducts = () => {
-  return products;
+  return ref(products);
 };
 
 export const getProduct = (id: number) => {
-  return products.find((product) => product.id === id);
+  const product = products.find((product) => product.id === id);
+  return ref(product);
 };
 
 export const getProductsInCategory = (category: string) => {
@@ -21,7 +23,7 @@ export const getProductsInCategory = (category: string) => {
       product_list.push(product);
     }
   }
-  return product_list;
+  return ref(product_list);
 };
 
 export const getDiscountPrice = (price: number, discount: number) => {

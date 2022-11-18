@@ -10,4 +10,6 @@ export const categories = {
   subscriptions: 'Subscriptions',
   bestsellers: 'Best Sellers',
   deals: 'Deals',
+  featured: 'Featured',
+  trending: 'Trending',
 };

@@ -1,14 +1,14 @@
 <template>
-  <div>
+  <section class="r-mt r-mb">
     <Breadcrumbs class="r-mx mt-4" :routes="routes" />
     <ProductCatalog
       class="r-mx"
-      title="All - Products"
+      :title="$route.params.category"
       :category="$route.params.category"
       :products="products"
     />
     <PageNav />
-  </div>
+  </section>
 </template>
 
 <script setup>
@@ -17,7 +17,7 @@ import { useRoute } from 'vue-router';
 
 const route = useRoute();
 
-const products = getProducts();
+const products = getProductsInCategory(route.params.category);
 const routes = ref([
   { route: '/', name: 'Home' },
   { route: `/products/${route.params.category}`, name: route.params.category },

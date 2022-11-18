@@ -1,41 +1,56 @@
 <template>
   <section class="relative">
-    <div class="r-mx py-4">
+    <div class="r-mx r-mb py-4">
       <Breadcrumbs :routes="routes" />
-      <div class="mt-4">
-        <img
-          class="rounded-2xl shadow"
-          :src="`/img/products/${product.img}`"
-          :alt="product.alt"
-        />
-      </div>
-      <div class="mt-4 p-4 | flex flex-col gap-4 | gradient-border rounded-xl">
-        <h1 class="text-2xl font-bold">{{ product.name }}</h1>
-        <p class="">{{ product.description }}</p>
-        <div class="flex items-center gap-8 justify-between">
-          <p class="font-bold">Amount</p>
-          <select class="py-2 | grow | gradient-border" name="amount-dropdown" id="">
-            <option v-for="amount in 5" value="productAmount">
-              {{ amount }}
-            </option>
-          </select>
+      <div class="mt-4 | flex flex-col md:flex-row gap-4">
+        <div class="grow shrink basis-1/2 md:aspect-square lg:aspect-auto">
+          <img
+            class="w-full h-full object-cover rounded-2xl shadow"
+            :src="`/img/products/${product.img}`"
+            :alt="product.alt"
+          />
         </div>
-        <div class="flex justify-between">
-          <p>{{ product.price }}</p>
-          <p>{{ getDiscountPrice(product.price, product.discount) }}</p>
+        <div
+          class="grow basis-1/2 p-4 md:p-8 | flex flex-col gap-4 md:gap-8 | gradient-border-rnone rounded-2xl"
+        >
+          <h1 class="text-2xl md:text-5xl font-bold">{{ product.name }}</h1>
+          <p class="text-xl">{{ product.description }}</p>
+          <div class="mt-4 | flex flex-col gap-4 md:gap-8">
+            <div class="grow | flex items-center gap-8 justify-start">
+              <p class="md:text-xl font-bold">Amount</p>
+              <select
+                class="py-2 px-1 | grow max-w-[225px] | gradient-border"
+                name="amount-dropdown"
+                v-model="product.amount"
+              >
+                <option disabled value="">Please select one</option>
+                <option v-for="amount in product.stock">
+                  {{ amount }}
+                </option>
+              </select>
+            </div>
+            <div class="grow | flex gap-4 justify-start items-center">
+              <p class="text-lg md:text-4xl font-bold">
+                ${{ getDiscountPrice(product.price, product.discount) }}
+              </p>
+              <p class="text-sm md:text-xl line-through">${{ product.price }}</p>
+            </div>
+          </div>
+          <div class="mt-4 | flex flex-col gap-4">
+            <button
+              @click="addToCart(product)"
+              class="grow text-white uppercase | bg-aqua py-4 rounded"
+            >
+              Add to cart
+            </button>
+            <button
+              @click="checkout(product)"
+              class="grow text-white uppercase | bg-ocean-grey py-4 rounded"
+            >
+              Checkout
+            </button>
+          </div>
         </div>
-        <button
-          @click="addCartProduct(product)"
-          class="text-white uppercase | bg-aqua py-4 rounded"
-        >
-          Add to cart
-        </button>
-        <button
-          @click="checkout(product)"
-          class="text-white uppercase | bg-ocean-grey py-4 rounded"
-        >
-          Checkout
-        </button>
       </div>
     </div>
   </section>
@@ -51,8 +66,14 @@ const props = defineProps({
 
 const router = useRouter();
 
-function checkout(product) {
+// const selectedAmount = ref(1);
+
+function addToCart(product) {
   addCartProduct(product);
+  alert('Added product to your cart!');
+}
+
+function checkout(product) {
   router.push('/checkout');
 }
 </script>

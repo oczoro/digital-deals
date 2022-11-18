@@ -1,5 +1,5 @@
 <template>
-  <footer class="r-mt | bg-ocean-default text-white">
+  <footer class="r-pt | bg-ocean-default text-white">
     <div class="footer-wrapper | r-mx | grid grid-cols-1 md:grid-cols-2">
       <FooterNav class="col-span-full lg:col-span-1" />
       <FooterNewsletter class="col-span-full lg:row-start-1 lg:col-span-1" />

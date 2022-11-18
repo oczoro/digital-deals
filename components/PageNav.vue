@@ -1,5 +1,5 @@
 <template>
-  <div class="mt-4 mb-8 | flex justify-center items-center gap-2">
+  <div class="r-mt r-mb | flex justify-center items-center gap-2">
     <button class="px-2 py-1 | flex | text-white bg-ocean-light rounded">
       <img src="/icons/chevron-white-left.svg" alt="Previous Page" />Prev
     </button>

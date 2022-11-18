@@ -5,21 +5,29 @@
   >
     <div class="card-image">
       <img
-        class="w-full h-28 | rounded-t-xl object-cover"
+        class="w-full h-28 md:h-36 | rounded-t-xl object-cover"
         :src="`/img/products/${product.img}`"
         :alt="product.alt"
       />
     </div>
-    <div class="card-content | grow px-1 py-1 | flex flex-col gap-3 justify-between">
+    <div class="card-content | grow p-1 md:p-2 | flex flex-col gap-3 justify-between">
       <div>
-        <h2 class="card-title | leading-4 text-sm font-bold">{{ product.name }}</h2>
-        <p class="card-subtitle | mt-1 | text-xs leading-4">{{ product.subtitle }}</p>
+        <h2
+          class="card-title | leading-4 text-sm md:text-base md:tracking-tight font-bold"
+        >
+          {{ product.name }}
+        </h2>
+        <p class="card-subtitle | mt-1 | text-xs md:text-sm leading-4">
+          {{ product.subtitle }}
+        </p>
       </div>
-      <div class="card-price | flex justify-between items-baseline">
-        <p class="text-xs line-through">${{ product.price }}</p>
-        <p class="text-sm font-bold">
+      <div
+        class="card-price | flex justify-between md:justify-start gap-2 items-baseline"
+      >
+        <p class="text-sm md:text-base font-bold">
           ${{ getDiscountPrice(product.price, product.discount) }}
         </p>
+        <p class="text-xs md:text-sm line-through">${{ product.price }}</p>
       </div>
     </div>
   </router-link>

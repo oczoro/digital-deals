@@ -13,11 +13,12 @@
       :src="`/img/products/${product.img}`"
       :alt="product.alt"
     />
-    <button
+    <router-link
+      to="/products/Deals"
       class="absolute bottom-4 ml-2 md:ml-10 lg:ml-4 | p-4 md:p-6 border-2 border-neutral text-2xl md:text-3xl text-neutral uppercase rounded-3xl"
     >
       See Deals
-    </button>
+    </router-link>
   </div>
 </template>
 

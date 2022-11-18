@@ -61,15 +61,25 @@
       <div
         :class="
           menu_toggled
-            ? 'translate-x-0 opacity-100 backdrop-opacity-80 backdrop-blur-md'
+            ? 'translate-x-0 opacity-100 backdrop-opacity-90 backdrop-blur-md'
             : '-translate-x-full opacity-0'
         "
-        class="fixed inset-0 z-50 | bg-ocean-default transition-all duration-150 ease-in"
+        class="fixed inset-0 z-50 | text-white bg-ocean-default/90 transition-all duration-150 ease-in"
       >
-        <button @click="menu_toggled = !menu_toggled">Close</button>
-        <ul>
-          <li v-for="(category, index) in categories" :key="index">
+        <button
+          class="absolute top-4 right-4 hover:brightness-125"
+          @click="menu_toggled = !menu_toggled"
+        >
+          <img src="/icons/close.svg" alt="Close" /><span class="sr-only">Close</span>
+        </button>
+        <ul class="h-full p-8 | flex flex-col justify-center gap-2">
+          <li
+            class="p-1 hover:-translate-y-1 hover:brightness-125 transition-all duration-75 ease-out"
+            v-for="(category, index) in categories"
+            :key="index"
+          >
             <router-link
+              class="text-2xl font-bold gradient-text drop-shadow"
               :tabindex="menu_toggled ? 0 : -1"
               @click="menu_toggled = !menu_toggled"
               :to="`/products/${category}`"

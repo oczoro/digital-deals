@@ -21,7 +21,7 @@ const props = defineProps({
   @apply xlg:col-span-10;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1080px) {
   section::before {
     content: '';
     background-image: url('/img/shape-1.svg');
